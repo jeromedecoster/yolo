@@ -5,9 +5,9 @@ metadata:
     app: web
   name: web
   namespace: test
-  annotations:
-    fluxcd.io/automated: "true"
-    fluxcd.io/tag.podinfod: semver:~1.0
+  # annotations:
+  #   fluxcd.io/automated: "true"
+  #   fluxcd.io/tag.podinfod: semver:~1.0
 spec:
   replicas: 1
   selector:

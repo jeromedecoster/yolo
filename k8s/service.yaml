@@ -6,12 +6,10 @@ metadata:
   name: web
   namespace: test
 spec:
+  type: LoadBalancer
+  selector:
+    app: web
   ports:
   - port: 4000
     protocol: TCP
     targetPort: 80
-  selector:
-    app: web
-  type: NodePort
-status:
-  loadBalancer: {}
