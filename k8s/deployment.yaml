@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web
+  name: web
+  namespace: test
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.podinfod: semver:~1.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - image: jeromedecoster/duck:1.0.0
+        name: duck
+
