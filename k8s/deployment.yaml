@@ -20,6 +20,6 @@ spec:
         app: web
     spec:
       containers:
-      - image: jeromedecoster/duck:3.0.0
+      - image: jeromedecoster/duck:1.0.0
         name: duck
 
